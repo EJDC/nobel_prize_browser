@@ -1,11 +1,15 @@
 const PrizeSelector = ({ prizes, onCategorySelected, onYearSelected }) => {
   const handleYearChange = function (event) {
-    const chosenYear = prizes[event.target.value];
+    const chosenYear = !prizes[event.target.value]
+      ? ""
+      : prizes[event.target.value].awardYear;
     onYearSelected(chosenYear);
   };
 
   const handleCategoryChange = function (event) {
-    const chosenCategory = prizes[event.target.value];
+    const chosenCategory = !prizes[event.target.value]
+      ? ""
+      : prizes[event.target.value].category.en;
     onCategorySelected(chosenCategory);
   };
 
@@ -17,37 +21,46 @@ const PrizeSelector = ({ prizes, onCategorySelected, onYearSelected }) => {
     if (!awardYearTracker.includes(prize.awardYear)) {
       awardYearTracker.push(prize.awardYear);
       return (
-        <option value={index} key={index}> {prize.awardYear} </option>
+        <option value={index} key={index}> 
+          {prize.awardYear}
+        </option>
       );
     }
+    return <></>
   });
 
-  const awardCategoryTracker = []
+  const awardCategoryTracker = [];
   const prizeCategories = prizes.map((prize, index) => {
-    if(!awardCategoryTracker.includes(prize.category.en)) {
-      awardCategoryTracker.push(prize.category.en)
+    if (!awardCategoryTracker.includes(prize.category.en)) {
+      awardCategoryTracker.push(prize.category.en);
       return (
         <option value={index} key={index}>
           {prize.category.en}
         </option>
       );
     }
+    return <></>
   });
 
   return (
     <>
-      <select defaultValue="" onChange={handleYearChange}>
-        <option value="" selected>
-          Choose a year?
-        </option>
-        {prizeYears}
-      </select>
-      <select defaultValue="" onChange={handleCategoryChange}>
-        <option value="" selected>
-          Choose a prize category?
-        </option>
-        {prizeCategories}
-      </select>
+      <ul>
+        <li>
+          <select defaultValue="" onChange={handleYearChange}>
+            <option value="">Choose a year?</option>
+            <option value="">All</option>
+            {prizeYears}
+          </select>
+        </li>
+        <li>and/or</li>
+        <li>
+          <select defaultValue="" onChange={handleCategoryChange}>
+            <option value="">Choose a prize category?</option>
+            <option value="">All</option>
+            {prizeCategories}
+          </select>
+        </li>
+      </ul>
     </>
   );
 };

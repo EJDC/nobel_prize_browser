@@ -5,8 +5,8 @@ import PrizeList from "../components/PrizeList";
 
 const MainContainer = () => {
   const [allPrizes, setAllPrizes] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState([]);
-  const [selectedYear, setSelectedYear] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedYear, setSelectedYear] = useState("");
 
   useEffect(() => {
     getPrizes();
@@ -30,7 +30,7 @@ const onYearSelected = function(year) {
   return (
     <>
       <section><PrizeSelector prizes={allPrizes} onCategorySelected={onCategorySelected} onYearSelected={onYearSelected}/></section>
-      <section><PrizeList prizes={allPrizes} /></section>
+      <section><PrizeList prizes={allPrizes} selectedCategory={selectedCategory} selectedYear={selectedYear}/></section>
       <section><PrizeView /></section>
     </>
   );
