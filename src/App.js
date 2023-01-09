@@ -1,4 +1,5 @@
 import './App.css';
+import './reset.css';
 import MainContainer from './containers/MainContainer';
 
 function App() {

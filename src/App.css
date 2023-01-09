@@ -1,38 +1,59 @@
 .App {
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #56A5BC;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#maincontent {
+  display: flex;
+  /* flex-direction: column-reverse; */
+  /* align-items: center; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#prizelist {
+  width: 65%;
+  text-align: center;
+  background-color: #A8AC94;
+  margin: 2%;
+  padding: 2%;
+  border-radius: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.laureates {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3%;
+}
+
+.prize {
+  color: black;
+  background-color: #82726D;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid black;
+  /* gap: 3rem; */
+  margin: 5%;
+  padding: 5%;
+  border-radius: 2rem;
+/* align-items: center; */
 }
 
-.App-link {
-  color: #61dafb;
+.prize-title {
+  color: #E8EFF1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.laureate-name {
+  text-align: center;
+}
+
+#prizeview {
+  width: 30%;
+  text-align: center;
+  background-color: #2C2F3F;
+  margin: 2%;
+  padding: 2%;
+  color: #E8EFF1;
+  border-radius: 2rem;
 }
