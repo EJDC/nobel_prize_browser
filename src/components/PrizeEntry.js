@@ -54,7 +54,13 @@ const PrizeEntry = ({ prize, onLaureateSelected }) => {
         // If motivation not shared, display name followed by motivation.
         return (
           <ul key={index}>
-            <li className="laureate-name">{laureateName}</li>
+            <li className="laureate-name">              <button
+                value={laureate.links[0].href}
+                onClick={handleLaureateSelect}
+              >
+                {laureateName}
+              </button>
+            </li>
           </ul>
         );
       }

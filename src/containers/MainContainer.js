@@ -8,6 +8,7 @@ const MainContainer = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedYear, setSelectedYear] = useState("");
   const [selectedLaureate, setSelectedLaureate] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     getPrizes();
@@ -29,8 +30,13 @@ const MainContainer = () => {
 
   const onLaureateSelected = function (laureate) {
     fetch(laureate)
-    .then(response => response.json())
-    .then((selectedLaureate) => setSelectedLaureate(selectedLaureate[0]));
+      .then((response) => response.json())
+      .then((selectedLaureate) => setSelectedLaureate(selectedLaureate[0]))
+      .then(() => togglePopup());
+  };
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -51,9 +57,14 @@ const MainContainer = () => {
             onLaureateSelected={onLaureateSelected}
           />
         </section>
-        <section id="prizeview">
-          <PrizeView selectedLaureate={selectedLaureate} />
-        </section>
+      </div>
+      <div>
+        {isOpen && (
+          <PrizeView
+            selectedLaureate={selectedLaureate}
+            handleClose={togglePopup}
+          />
+        )}
       </div>
     </>
   );
