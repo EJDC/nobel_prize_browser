@@ -122,3 +122,6 @@ h3 {
   text-align: center;
 }
 
+p > b {
+  font-weight: bold;
+}
