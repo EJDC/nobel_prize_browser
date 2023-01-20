@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nobel_prize_browser/static/css/main.15c8a4ba.css",
+    "main.js": "/nobel_prize_browser/static/js/main.15c1aa53.js",
+    "static/js/787.f97c2dee.chunk.js": "/nobel_prize_browser/static/js/787.f97c2dee.chunk.js",
+    "index.html": "/nobel_prize_browser/index.html",
+    "main.15c8a4ba.css.map": "/nobel_prize_browser/static/css/main.15c8a4ba.css.map",
+    "main.15c1aa53.js.map": "/nobel_prize_browser/static/js/main.15c1aa53.js.map",
+    "787.f97c2dee.chunk.js.map": "/nobel_prize_browser/static/js/787.f97c2dee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15c8a4ba.css",
+    "static/js/main.15c1aa53.js"
+  ]
+}
