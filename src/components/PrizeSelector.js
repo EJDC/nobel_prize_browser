@@ -1,4 +1,5 @@
 const PrizeSelector = ({ prizes, onCategorySelected, onYearSelected }) => {
+  
   const handleYearChange = function (event) {
     const chosenYear = !prizes[event.target.value]
       ? ""
@@ -43,8 +44,8 @@ const PrizeSelector = ({ prizes, onCategorySelected, onYearSelected }) => {
   });
 
   return (
-    <>
-      <ul>
+    <div>
+      <ul className="selectorlist">
         <li>
           <select defaultValue="" onChange={handleYearChange}>
             <option value="">Choose a year?</option>
@@ -52,7 +53,7 @@ const PrizeSelector = ({ prizes, onCategorySelected, onYearSelected }) => {
             {prizeYears}
           </select>
         </li>
-        <li>and/or</li>
+        {/* <li>and/or</li> */}
         <li>
           <select defaultValue="" onChange={handleCategoryChange}>
             <option value="">Choose a prize category?</option>
@@ -61,7 +62,7 @@ const PrizeSelector = ({ prizes, onCategorySelected, onYearSelected }) => {
           </select>
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 

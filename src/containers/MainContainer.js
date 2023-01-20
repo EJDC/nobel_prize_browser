@@ -60,15 +60,19 @@ const MainContainer = () => {
 
   return (
     <>
-      <section>
+      <h1 id="siteheader">THE NOBEL PRIZE</h1>
+      <h2 id="sitesubheader">Prize Browser</h2>
+      <div className="maincontent">
+      <section id="prizeSelectorSection">
         <PrizeSelector
           prizes={allPrizes}
           onCategorySelected={onCategorySelected}
           onYearSelected={onYearSelected}
         />
       </section>
-      <div id="maincontent">
-        <section id="prizelist">
+      </div>
+      <div className="maincontent">
+        <section id="prizeListSection">
           <PrizeList
             prizes={allPrizes}
             selectedCategory={selectedCategory}

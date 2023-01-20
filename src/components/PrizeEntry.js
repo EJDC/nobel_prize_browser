@@ -46,7 +46,6 @@ const PrizeEntry = ({ prize, onLaureateSelected }) => {
                 {laureateName}
               </button>
             </li>
-            <br></br>
             <li className="laureate-motivation">{laureate.motivation.en}</li>
           </ul>
         );
@@ -68,9 +67,9 @@ const PrizeEntry = ({ prize, onLaureateSelected }) => {
   }
   return (
     <div className="prize">
-      <p className="prize-title">
-        {prize.awardYear} {prize.category.en}
-      </p>
+      <h3 className="prize-title">
+        The {prize.awardYear} Nobel Prize in {prize.category.en}
+      </h3>
       <br></br>
       <ul className="laureates">{laureates}</ul>
       <br></br>

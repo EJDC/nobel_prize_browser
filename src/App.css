@@ -1,48 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 .App {
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-color: #56A5BC;
+  font-family: "Albert Sans", sans-serif;
+  /* background-color: #56A5BC; */
+  background-color: white;
   min-height: 100vh;
+  /* min-width: 90vw; */
 }
 
-#maincontent {
+/* TITLE AND HEADER */
+
+#siteheader {
+  margin-top: 3vh;
+  font-size: 2.5rem;
+  color: #b58b45;
+  font-weight: 500;
+}
+
+#sitesubheader {
+  margin-top: 1vh;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #b58b45;
+}
+
+/*  PRIZE SELECTOR AND PRIZE LIST */
+
+.maincontent {
   display: flex;
-  /* flex-direction: column-reverse; */
-  /* align-items: center; */
   justify-content: center;
 }
 
-#prizelist {
-  width: 65%;
-  text-align: center;
-  background-color: #A8AC94;
-  margin: 2%;
-  padding: 2%;
+#prizeSelectorSection {
+  background-color: #f6ebd7;
+  margin-top: 3vh;
+  width: 60vw;
+  /* display: flex; */
+  /* justify-content: center; */
+  padding-top: 2vw;
+  padding-bottom: 2vw;
   border-radius: 2rem;
 }
 
+#prizeListSection {
+  /* background-color: #A8AC94; */
+  width: 80vw;
+  text-align: center;
+  background-color: #f6ebd7;
+  border-radius: 2rem;
+  margin-top: 3vh;
+}
+
+.selectorlist {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+  text-align: center;
+  max-width: 80vw;
+  flex-wrap: wrap;
+  /* overflow: auto; */
+}
+
+select {
+  color: #2c2f3f;
+  background-color: #cedfea;
+  font-family: "Albert Sans", sans-serif;
+  font-size: larger;
+  font-size: 1.7vh;
+  font-weight: 500;
+  padding: 1vh;
+  border-radius: 1rem;
+}
+
+button {
+  color: #2c2f3f;
+  background-color: #cedfea;
+  font-family: "Albert Sans", sans-serif;
+  font-size: larger;
+  font-size: 1.7vh;
+  font-weight: 500;
+  padding: 1vh;
+  border-radius: 1rem;
+
+}
 .laureates {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 3%;
+  flex-wrap: wrap;
+  gap: 3vw;
+}
+
+.laureate-motivation {
+  justify-content: center;
 }
 
 .prize {
   color: black;
-  background-color: #82726D;
+  /* background-color: #82726D; */
+  background-color: #cedfea;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
   /* gap: 3rem; */
-  margin: 5%;
-  padding: 5%;
+  margin: 2vh;
+  padding: 1vh;
   border-radius: 2rem;
-/* align-items: center; */
+  /* align-items: center; */
 }
 
 .prize-title {
-  color: #E8EFF1;
+  color: #2c2f3f;
+  font-weight: bold;
+  margin-top: 1vh;
 }
 
 .laureate-name {
@@ -52,10 +124,10 @@
 #prizeview {
   width: 30%;
   text-align: center;
-  background-color: #2C2F3F;
+  background-color: #2c2f3f;
   margin: 2%;
   padding: 2%;
-  color: #E8EFF1;
+  color: #e8eff1;
   border-radius: 2rem;
 }
 
@@ -79,7 +151,7 @@
   height: auto;
   max-height: 70vh;
   margin-top: calc(100vh - 85vh - 20px);
-  background: #2C2F3F;
+  background: #2c2f3f;
   border-radius: 4px;
   padding: 20px;
   border: 1px solid #999;
@@ -87,11 +159,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #E8EFF1;
+  color: #e8eff1;
 }
 
 .close-icon {
-  content: 'x';
+  content: "x";
   cursor: pointer;
   position: fixed;
   right: calc(15% - 1px);
@@ -111,7 +183,6 @@ img {
   max-width: 70%;
   height: auto;
   border-radius: 5%;
-
 }
 
 p {
