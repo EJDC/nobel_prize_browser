@@ -3,10 +3,8 @@
 .App {
   text-align: center;
   font-family: "Albert Sans", sans-serif;
-  /* background-color: #56A5BC; */
   background-color: white;
   min-height: 100vh;
-  /* min-width: 90vw; */
 }
 
 /* TITLE AND HEADER */
@@ -36,15 +34,12 @@
   background-color: #f6ebd7;
   margin-top: 3vh;
   width: 60vw;
-  /* display: flex; */
-  /* justify-content: center; */
   padding-top: 2vw;
   padding-bottom: 2vw;
   border-radius: 2rem;
 }
 
 #prizeListSection {
-  /* background-color: #A8AC94; */
   width: 80vw;
   text-align: center;
   background-color: #f6ebd7;
@@ -60,7 +55,6 @@
   text-align: center;
   max-width: 80vw;
   flex-wrap: wrap;
-  /* overflow: auto; */
 }
 
 select {
@@ -76,13 +70,17 @@ select {
 
 button {
   color: #2c2f3f;
-  background-color: #cedfea;
+  color: #b58b45;
+
+  /* background-color: #cedfea; */
   font-family: "Albert Sans", sans-serif;
   font-size: larger;
   font-size: 1.7vh;
-  font-weight: 500;
+  font-weight: 400;
   padding: 1vh;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  border-color: #b58b45;
+  margin-top: 1vh;
 
 }
 .laureates {
@@ -95,26 +93,25 @@ button {
 
 .laureate-motivation {
   justify-content: center;
+  margin-top: 1vh;
 }
 
 .prize {
   color: black;
-  /* background-color: #82726D; */
   background-color: #cedfea;
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  /* gap: 3rem; */
   margin: 2vh;
   padding: 1vh;
   border-radius: 2rem;
-  /* align-items: center; */
 }
 
 .prize-title {
   color: #2c2f3f;
   font-weight: bold;
   margin-top: 1vh;
+  font-size: larger
 }
 
 .laureate-name {
@@ -136,12 +133,12 @@ button {
 .popup-box {
   position: fixed;
   background: #000000a0;
-  /* background: black; */
   width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
   z-index: 10;
+
 }
 
 .box {
@@ -160,6 +157,10 @@ button {
   flex-direction: column;
   align-items: center;
   color: #e8eff1;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
 }
 
 .close-icon {
@@ -183,6 +184,32 @@ img {
   max-width: 70%;
   height: auto;
   border-radius: 5%;
+
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 p {

@@ -58,6 +58,13 @@ const MainContainer = () => {
     setIsOpen(!isOpen);
   };
 
+  const togglePopupClose = () => {
+    setIsOpen(!isOpen);
+    setSelectedLaureate("")
+    setSelectedLaureateWikiData("")
+  };
+
+
   return (
     <>
       <h1 id="siteheader">THE NOBEL PRIZE</h1>
@@ -86,7 +93,7 @@ const MainContainer = () => {
           <PrizeView
             selectedLaureate={selectedLaureate}
             selectedLaureateWikiData={selectedLaureateWikiData}
-            handleClose={togglePopup}
+            handleClose={togglePopupClose}
           />
         )}
       </div>
