@@ -71,12 +71,10 @@ select {
 button {
   color: #2c2f3f;
   color: #b58b45;
-
-  /* background-color: #cedfea; */
   font-family: "Albert Sans", sans-serif;
   font-size: larger;
   font-size: 1.7vh;
-  font-weight: 400;
+  font-weight: 500;
   padding: 1vh;
   border-radius: 0.5rem;
   border-color: #b58b45;
@@ -167,13 +165,12 @@ button {
   content: "x";
   cursor: pointer;
   position: fixed;
-  right: calc(15% - 1px);
+  right: calc(15% - 15px);
   top: calc(100vh - 85vh - 15px);
-  /* color: red; */
   background: grey;
   width: 25px;
   height: 25px;
-  /* border-radius: 50%; */
+  border-radius: 50%;
   line-height: 20px;
   text-align: center;
   border: 1px solid #999;
