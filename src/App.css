@@ -155,6 +155,7 @@ button {
   flex-direction: column;
   align-items: center;
   color: #e8eff1;
+  animation: fadeIn 2s;
   -webkit-animation: fadeIn 2s;
   -moz-animation: fadeIn 2s;
   -o-animation: fadeIn 2s;
